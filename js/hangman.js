@@ -44,7 +44,7 @@ function generateButtons() {
   document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
-//Regarde si avec la lettre proposée soit la bonne lettre, le script va vérifier à chaque fois que tu as donné une lettre, si la lettre est bonne l'index sera supérieur ou égal à 0. Si il est faux il sera égal à -1 donc grâce à ça on va pouvoir verifier(index>=0) quand la lettre est bonne si tu as deviné le mot, et si tu as gagné, dans le cas inverse ça vaux dire que l'indexOf a renvoyé -1 donc c'est une fausse lettre, ça updatera ton nombre de mistakes, l'image de mistake, et ça verifiera si tu perds ou non
+//Regarde que la lettre proposée soit la bonne lettre, le script va vérifier à chaque fois que tu as donné une lettre, si la lettre est bonne l'index sera supérieur ou égal à 0. Si il est faux il sera égal à -1 donc grâce à ça on va pouvoir verifier(index>=0) quand la lettre est bonne si tu as deviné le mot, et si tu as gagné, dans le cas inverse ça vaux dire que l'indexOf a renvoyé -1 donc c'est une fausse lettre, ça updatera ton nombre de mistakes, l'image de mistake, et ça verifiera si tu perds ou non
 function handleGuess(chosenLetter) {
   guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
   document.getElementById(chosenLetter).setAttribute('disabled', true);
